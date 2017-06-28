@@ -5,12 +5,12 @@ Begin with installing the dependencies below, and continue with the Getting Star
 
 The idea in tihs project is to have iOS automation for both UIAutomation and XCUItset infrastructure.
 
-XCUItest is supported via Quantum and actually much more easy to run XCUITest with since it supports several tests “profile” – you can set up another profile without modifying the existing once:
-•	Create new folder under resources (like android and ios): xcuiTest
-•	In the env.properties add capability automationName to override the Appium automation
-XXX.capabilities.automationName=XCUITest
-•	You can add specific locators under the same folder.
-•	In TestNG xml define <parameter name="env.resources" value="src/main/resources/xcuiTest"/>
+XCUItest is supported via Quantum and actually much more easy to run XCUITest with since it supports several tests “profile” – 
+you can set up another profile without modifying the existing once:
+*	Create new folder under resources (like android and ios): xcuiTest
+*	In the env.properties add capability automationName to override the Appium automation <br>`capabilities.automationName=XCUITest`<br>
+*	You can add specific locators under the same folder.
+*	In TestNG xml define <parameter name="env.resources" value="src/main/resources/xcuiTest"/>
 
 
 
