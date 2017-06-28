@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Appium Demo Suite" verbose="0" >
+    <listeners>
+        <listener class-name="com.quantum.listerners.QuantumReportiumListener"/>
+    </listeners>
+
+    <!-- To use actual AppiumDriver classes defined    -->
+    <!-- by driverClass property in env.resources dirs -->
+    <!-- Set driver.name value to perfectoDriver       -->
+    <parameter name="driver.name" value="perfectoRemoteDriver"/>
+
+    <test name="XCUITest Test" enabled="true">
+        <!--<parameter name="driver.capabilities.model" value="iPhone.*"></parameter>-->
+        <parameter name="driver.capabilities.deviceName" value="78F5FE54B42A01EE530F6084412CDAE7FBA69490"></parameter>
+        <parameter name="env.resources" value="src/main/resources/xcuiTest"/>
+
+        <groups>
+            <run>
+                <include name="@appium"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory"/>
+        </classes>
+    </test>
+    <test name="IOS Test" enabled="true">
+        <!--<parameter name="driver.capabilities.model" value="iPhone.*"></parameter>-->
+        <parameter name="driver.capabilities.deviceName" value="78F5FE54B42A01EE530F6084412CDAE7FBA69490"></parameter>
+        <parameter name="env.resources" value="src/main/resources/ios"/>
+
+        <groups>
+            <run>
+                <include name="@appium"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory"/>
+        </classes>
+    </test>
+</suite>
