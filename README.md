@@ -19,4 +19,4 @@ To prepare your Perfecto Lab and automation scripts to use the XCUITest-based au
 the samples in this repo shows how to start using XCUITest with Appium automation script and Quantum.
 
 For more information please read our documentation: 
-http://developers.perfectomobile.com/display/PD/XCUITest+based+iOS+automation+infrastructure#XCUITestbasediOSautomationinfrastructure-step1
+http://developers.perfectomobile.com/display/TT/Migrating+iOS+test+scripts+to+XCUITest-based+automation+infrastructure
