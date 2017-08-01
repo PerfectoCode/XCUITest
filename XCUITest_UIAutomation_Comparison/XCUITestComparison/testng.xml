@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+	<parameter name="mcm" value="HOST.perfectomobile.com" />
+	<parameter name="mcmUser" value="USERNAME" />
+	<parameter name="mcmPassword" value="PASSWORD" />
+	<parameter name="browserName" value="" />
+	
+	<test name="Test iOS XCUITest/UIAutomation" enabled="true">
+		<parameter name="platformName" value="iOS"></parameter>
+		<parameter name="platformVersion" value="10.3.*"></parameter>
+		<parameter name="automationName" value="XCUITest"></parameter>
+		<classes>
+			<class name="xcui_uiautomation.RecipesTest" />
+		</classes>
+	</test>
+	
+	<test name="Test iOS XCUITest" enabled="true">
+		<parameter name="platformName" value="iOS"></parameter>
+		<parameter name="platformVersion" value="10.2.*"></parameter>
+		<parameter name="automationName" value="XCUITest"></parameter>
+		<classes>
+			<class name="xcui.RecipesTest" />
+		</classes>
+	</test>
+	
+	<test name="Test iOS UIAutomation" enabled="true">
+		<parameter name="platformName" value="iOS"></parameter>
+		<parameter name="platformVersion" value="9.*"></parameter>
+		<parameter name="automationName" value="Appium"></parameter>
+		<classes>
+			<class name="uiautomation.RecipesTest" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
